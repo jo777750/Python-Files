@@ -1,0 +1,94 @@
+In Python, variables that are only referenced inside a function are implicitly global. If a variable is assigned a value anywhere within the function’s body, it’s assumed to be a local unless explicitly declared as global.
+
+x = 10
+def bar():
+    print(x)
+bar()
+10
+
+
+x = 10
+def foo():
+    print(x)
+    x += 1
+results in an UnboundLocalError:
+
+>>>
+foo()
+Traceback (most recent call last):
+  ...
+UnboundLocalError: local variable 'x' referenced before assignment
+
+
+x = 10
+def foobar():
+    global x
+    print(x)
+    x += 1
+foobar()
+10
+
+
+What are the rules for local and global variables in Python?
+In Python, variables that are only referenced inside a function are implicitly global. If a variable is assigned a value anywhere within the function’s body, it’s assumed to be a local unless explicitly declared as globa
+
+strings cant be changed but workarund like below:
+
+>>> import io
+>>> s = "Hello, world"
+>>> sio = io.StringIO(s)
+>>> sio.getvalue()
+'Hello, world'
+>>> sio.seek(7)
+7
+>>> sio.write("there!")
+6
+>>> sio.getvalue()
+'Hello, there!'
+
+--------------------
+
+>>>color = "fish"
+>>>color
+'fish'
+>>>color = 12
+>>>color
+12
+
+-------------
+
+color = "yellow"
+day = "Monday"
+print("conc",color + day) 
+ print(day*8)
+ 
+ output is:
+ 
+conc yellowMonday
+MondayMondayMondayMondayMondayMondayMondayMonday
+---------------
+
+import calendar
+calendar.prmonth(2022,5)
+
+
+-----
+JOIN FUNCTION
+
+myTuple = ("John", "Peter", "Vicky")
+
+x = "#".join(myTuple)
+
+print(x)
+
+----
+
+>>> list(range(5, 10))
+[5, 6, 7, 8, 9]
+
+>>> list(range(0, 10, 3))
+[0, 3, 6, 9]
+
+-----------------
+
+
