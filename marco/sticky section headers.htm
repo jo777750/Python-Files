@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky section headers</title>
+    <style>
+        .section {
+          font-size: 1.4em;
+          letter-spacing: 0.05em;
+          line-height: 1.5em;
+          h2, h3 {
+            text-align: center;
+            margin: 0;
+            font-weight: normal;
+          }
+          &__header {
+            position: sticky;
+            top: 0;
+            padding: 1em;
+            color: #a99160;
+            background: #171717;
+          }
+          &__content {
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            
+            & > div {
+              max-width: 992px;
+            }
+          }
+        }
+        
+        </style>
+</head>
+<body>
+    <section class="section">
+        <div class="section__header">
+          <h2>
+            Section #1 Header
+          </h2>
+        </div>
+        
+        <div class="section__content">
+          <div>
+            <h3>
+              Section #1
+            </h3>
+    
+</body>
+</html>
